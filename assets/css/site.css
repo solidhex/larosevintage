@@ -1,0 +1,119 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+html {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+q, blockquote {
+  quotes: none; }
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+a img {
+  border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block; }
+
+.icons-sprite, .social .icons-fb, .social .icons-instagram, .social .icons-twitter {
+  background-image: url('../img/icons-s1e365738c3.png');
+  background-repeat: no-repeat; }
+
+/**
+* Import Typography
+*/
+@font-face {
+  font-family: 'clarendon_btroman';
+  src: url("../fonts/clarendon-roman/08634_clarendonbt-webfont.woff2") format("woff2"), url("../fonts/clarendon-roman/08634_clarendonbt-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+/**
+* General Selectors
+*/
+body {
+  background: white url("../img/bg.png") center top repeat;
+  padding: 20px 0 44px;
+  font-family: 'clarendon_btroman', serif; }
+
+img {
+  display: block; }
+
+.home [role='main'] {
+  background-color: #D9D9D9; }
+
+.welcome p {
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 38px; }
+
+.page {
+  margin: 0 auto;
+  width: 980px; }
+  .page > header {
+    text-align: center; }
+    .page > header img {
+      display: inline-block;
+      vertical-align: top; }
+
+.grid {
+  *zoom: 1;
+  margin: 0 0 0 60px;
+  padding-bottom: 44px; }
+  .grid:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .grid > li {
+    float: left;
+    margin: 0 16px 16px 0; }
+
+.social {
+  text-align: right;
+  vertical-align: top;
+  font-size: 0;
+  margin: 32px 100px 0; }
+  .social .icons-fb {
+    background-position: 0 0; }
+  .social .icons-instagram {
+    background-position: 0 -30px; }
+  .social .icons-twitter {
+    background-position: 0 -60px; }
+  .social a {
+    text-indent: -119988px;
+    overflow: hidden;
+    text-align: left;
+    text-transform: capitalize;
+    display: inline-block;
+    height: 30px;
+    margin-left: 8px;
+    width: 30px; }

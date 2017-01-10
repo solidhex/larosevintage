@@ -1,0 +1,70 @@
+@import "compass/reset";
+@import "compass/utilities/sprites";
+@import "compass/utilities";
+@import "icons/*.png";
+
+
+/**
+* Import Typography
+*/
+
+@import "typography/clarendon-roman";
+
+/**
+* General Selectors
+*/
+
+
+body {
+	background: white url('../img/bg.png') center top repeat;
+	padding: 20px 0 44px;
+	font-family: 'clarendon_btroman', serif;
+}
+
+img { display: block; }
+
+.home {
+	[role='main'] { background-color: #D9D9D9; }
+}
+
+.welcome {
+	p { 
+		font-size: 36px; 
+		font-weight: bold;
+		line-height: 38px;
+	}
+}
+
+.page {
+	margin: 0 auto;
+	width: 980px;
+	> header {
+		text-align: center;
+		img { display: inline-block; vertical-align: top; }
+	}
+}
+
+.grid {
+	@include pie-clearfix;
+	margin: 0 0 0 60px;
+	padding-bottom: (60px-16px);
+	> li {
+		float: left;
+		margin: 0 16px 16px 0;
+	}
+}
+
+.social {
+	@include all-icons-sprites;
+	text-align: right;
+	vertical-align: top;
+	font-size: 0;
+	margin: 32px 100px 0;
+	a {
+		@include hide-text(left);
+		display: inline-block;
+		height: 30px;
+		margin-left: 8px;
+		width: 30px;
+	}
+}
