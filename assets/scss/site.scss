@@ -1,6 +1,7 @@
 @import "compass/reset";
 @import "compass/utilities/sprites";
 @import "compass/utilities";
+@import "compass/css3";
 @import "icons/*.png";
 
 
@@ -11,29 +12,57 @@
 @import "typography/clarendon-roman";
 
 /**
+* Set Variables
+*/
+
+// see use of default: http://robots.thoughtbot.com/sass-default
+$link-color: #000 !default;
+$highlight: #FF8A7F;
+
+/**
 * General Selectors
 */
+
+*,
+*:after,
+*:before {
+  @include box-sizing(border-box);
+}
 
 
 body {
 	background: white url('../img/bg.png') center top repeat;
+	color: #000;
 	padding: 20px 0 44px;
 	font-family: 'clarendon_btroman', serif;
 }
 
 img { display: block; }
 
+/**
+* Home
+*/
+
 .home {
 	[role='main'] { background-color: #D9D9D9; }
 }
 
 .welcome {
+	@include pie-clearfix;
 	p { 
 		font-size: 36px; 
 		font-weight: bold;
 		line-height: 38px;
+		width: 50%;
+		&:first-child { float: left; }
+		&:last-child { float: right; }
 	}
 }
+
+/**
+* Layout
+*/
+
 
 .page {
 	margin: 0 auto;
@@ -41,6 +70,27 @@ img { display: block; }
 	> header {
 		text-align: center;
 		img { display: inline-block; vertical-align: top; }
+		nav {
+			border: 3px solid #000;
+			border-style: solid none;
+			margin: 10px auto;
+			width: 780px;
+			ul { 
+				display: flex; 
+				justify-content: space-around; 
+				li[class*="current"] a { color: $highlight; }
+			}
+			a { 
+				@include transition(color 250ms cubic-bezier(0.000, 0.000, 0.580, 1.000));
+				color: $link-color;
+				font-size: 32px;
+				line-height: 53px;
+				text-decoration: none;
+				&:hover {
+					color: $highlight;
+				}
+			}
+		}
 	}
 }
 
@@ -53,6 +103,10 @@ img { display: block; }
 		margin: 0 16px 16px 0;
 	}
 }
+
+/**
+* Footer
+*/
 
 .social {
 	@include all-icons-sprites;

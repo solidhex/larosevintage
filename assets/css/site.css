@@ -58,24 +58,52 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-weight: normal;
   font-style: normal; }
 /**
+* Set Variables
+*/
+/**
 * General Selectors
 */
+*,
+*:after,
+*:before {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
 body {
   background: white url("../img/bg.png") center top repeat;
+  color: #000;
   padding: 20px 0 44px;
   font-family: 'clarendon_btroman', serif; }
 
 img {
   display: block; }
 
+/**
+* Home
+*/
 .home [role='main'] {
   background-color: #D9D9D9; }
 
-.welcome p {
-  font-size: 36px;
-  font-weight: bold;
-  line-height: 38px; }
+.welcome {
+  *zoom: 1; }
+  .welcome:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .welcome p {
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 38px;
+    width: 50%; }
+    .welcome p:first-child {
+      float: left; }
+    .welcome p:last-child {
+      float: right; }
 
+/**
+* Layout
+*/
 .page {
   margin: 0 auto;
   width: 980px; }
@@ -84,6 +112,27 @@ img {
     .page > header img {
       display: inline-block;
       vertical-align: top; }
+    .page > header nav {
+      border: 3px solid #000;
+      border-style: solid none;
+      margin: 10px auto;
+      width: 780px; }
+      .page > header nav ul {
+        display: flex;
+        justify-content: space-around; }
+        .page > header nav ul li[class*="current"] a {
+          color: #FF8A7F; }
+      .page > header nav a {
+        -moz-transition: color 250ms cubic-bezier(0, 0, 0.58, 1);
+        -o-transition: color 250ms cubic-bezier(0, 0, 0.58, 1);
+        -webkit-transition: color 250ms cubic-bezier(0, 0, 0.58, 1);
+        transition: color 250ms cubic-bezier(0, 0, 0.58, 1);
+        color: #000;
+        font-size: 32px;
+        line-height: 53px;
+        text-decoration: none; }
+        .page > header nav a:hover {
+          color: #FF8A7F; }
 
 .grid {
   *zoom: 1;
@@ -97,6 +146,9 @@ img {
     float: left;
     margin: 0 16px 16px 0; }
 
+/**
+* Footer
+*/
 .social {
   text-align: right;
   vertical-align: top;

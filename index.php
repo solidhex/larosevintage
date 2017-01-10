@@ -8,11 +8,14 @@
 	<div class="page">
 		<header>
 			<a href="<?php bloginfo( 'url' ) ?>"><img src="<?php bloginfo( 'template_directory' ); ?>/assets/img/logo.jpeg" width="337" height="108" alt="LA Rose Vintage Fasion"></a>
-			<nav>
-				<a href="<?php bloginfo( 'url' ); ?>">L.A. Rose</a>
-				<a href="#">Contact</a>
-				<a href="#">Photos</a>
-			</nav>
+			<?php
+				$nav_args = array(
+					'menu' => 'main-navigation',
+					'container' => 'nav'
+				);
+				
+				wp_nav_menu( $nav_args );
+			?>
 		</header>
 		<div role="main">
 			<div class="welcome">
@@ -21,8 +24,6 @@
 					Los Angeles, CA 90046<br>
 					323.938.9909<br>
 				</p>
-			</div>
-			<div class="welcome">
 				<p>
 					We Are Always Open Monday to Saturday<br>
 					12:00 -7:00pm<br>
