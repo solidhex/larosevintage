@@ -86,7 +86,8 @@ img {
   background-color: #D9D9D9; }
 
 .welcome {
-  *zoom: 1; }
+  *zoom: 1;
+  margin-bottom: 50px; }
   .welcome:after {
     content: "";
     display: table;
@@ -95,11 +96,15 @@ img {
     font-size: 36px;
     font-weight: bold;
     line-height: 38px;
+    padding: 0 5px;
     width: 50%; }
     .welcome p:first-child {
       float: left; }
     .welcome p:last-child {
-      float: right; }
+      float: right;
+      text-align: center; }
+    .welcome p small {
+      font-size: 30px; }
 
 /**
 * Layout

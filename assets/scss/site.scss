@@ -49,13 +49,16 @@ img { display: block; }
 
 .welcome {
 	@include pie-clearfix;
+	margin-bottom: 50px;
 	p { 
 		font-size: 36px; 
 		font-weight: bold;
 		line-height: 38px;
+		padding: 0 5px;
 		width: 50%;
-		&:first-child { float: left; }
-		&:last-child { float: right; }
+		&:first-child { float: left;}
+		&:last-child { float: right; text-align: center; }
+		small { font-size: 30px; }
 	}
 }
 

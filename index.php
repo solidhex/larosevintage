@@ -7,7 +7,9 @@
 <body <?php body_class(); ?>>
 	<div class="page">
 		<header>
-			<a href="<?php bloginfo( 'url' ) ?>"><img src="<?php bloginfo( 'template_directory' ); ?>/assets/img/logo.jpeg" width="337" height="108" alt="LA Rose Vintage Fasion"></a>
+			
+			<?php the_custom_logo(); ?>
+			
 			<?php
 				$nav_args = array(
 					'menu' => 'main-navigation',
@@ -23,11 +25,12 @@
 					8064 Melrose Ave<br>
 					Los Angeles, CA 90046<br>
 					323.938.9909<br>
+					<small>We often stay late, call us!</small>
 				</p>
 				<p>
 					We Are Always Open Monday to Saturday<br>
 					12:00 -7:00pm<br>
-					Closed Sunday
+					<small>Closed Sunday</small>
 				</p>
 			</div>
 			<ul class="grid">
